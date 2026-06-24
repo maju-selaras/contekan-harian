@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kitab Contekan Hari Pertama - Sukses Coding & Database</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #28a745;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        h2 {
+            color: #16a085;
+            margin-top: 30px;
+            background-color: #e8f8f5;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        h3 { color: #2980b9; }
+        ol, ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        .highlight {
+            background-color: #f1c40f;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .code-box {
+            background-color: #2d3436;
+            color: #dfe6e9;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            border-top: 1px solid #bdc3c7;
+            padding-top: 20px;
+        }
+        .badge {
+            background-color: #28a745;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📝 KITAB CONTEKAN HARI PERTAMA<br>Petualangan Coding Pak Yudi</h1>
+
+    <p><em>"Langkah kecil hari ini untuk masa depan keluarga kecilku!"</em> — Catatan panduan praktis dari nol sampai sukses membuat web pintar dan database lokal.</p>
+
+    <h2>📁 BAGIAN 1: Membuat Website Pintar di Laragon</h2>
+    
+    <h3>Langkah 1: Menyalakan Server</h3>
+    <ul>
+        <li>Buka aplikasi <strong>Laragon</strong>.</li>
+        <li>Klik tombol <span class="highlight">Start All</span> sampai status Apache dan MySQL menyala.</li>
+    </ul>
+
+    <h3>Langkah 2: Membuat Rumah Proyek & Folder Ala GitHub</h3>
+    <ul>
+        <li>Klik kanan di area Laragon > pilih <strong>Quick App</strong> > pilih <strong>Blank</strong>.</li>
+        <li>Beri nama proyek: <span class="highlight">web-pertamaku</span> lalu klik OK.</li>
+        <li>Klik tombol <strong>Root</strong> pada Laragon untuk membuka foldernya di komputer.</li>
+        <li>Masuk ke folder <code>web-pertamaku</code>, lalu buat dua folder baru di dalamnya agar rapi seperti repositori GitHub:
+            <ul>
+                <li>Folder <code>css</code> (untuk menghias tampilan).</li>
+                <li>Folder <code>js</code> (untuk menyimpan otak/logika).</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Langkah 3: Membuat File Web</h3>
+    <ul>
+        <li>Di dalam folder utama <code>web-pertamaku</code>, klik kanan > <strong>New</strong> > <strong>Text Document</strong>.</li>
+        <li>Beri nama <span class="highlight">index.html</span> (hapus akhiran <code>.txt</code>-nya).</li>
+        <li>Buka file tersebut menggunakan Notepad atau VS Code, lalu tempelkan kode web pintar ini dan simpan (Ctrl + S):</li>
+    </ul>
+
+    <div class="code-box">
+        &lt;!-- Kode HTML Web Menyapa Berdasarkan Waktu --&gt;<br>
+        (Gunakan kode index.html terakhir yang bisa memunculkan input nama dan tombol hijau)
+    </div>
+
+    <h3>Langkah 4: Uji Coba Web</h3>
+    <ul>
+        <li>Buka browser (Chrome/Edge), lalu ketik alamat: <span class="highlight">http://localhost/web-pertamaku/</span></li>
+        <li>Ketik nama Anda, klik tombol hijaunya, dan lihat keajaibannya!</li>
+    </ul>
+
+    <h2>🛢️ BAGIAN 2: Merancang Database di DBeaver</h2>
+
+    <h3>Langkah 1: Menyambungkan Jembatan Data</h3>
+    <ol>
+        <li>Buka aplikasi <strong>DBeaver</strong>.</li>
+        <li>Klik ikon <strong>Colokan Listrik Plus Hijau</strong> di pojok kiri atas.</li>
+        <li>Pilih <strong>MySQL</strong> > klik <strong>Next</strong>.</li>
+        <li>Pastikan Host: <code>localhost</code>, Username: <code>root</code>, dan kosongkan kolom Password.</li>
+        <li>Jika diminta unduh driver, klik <span class="highlight">Download</span>. Jika error, ganti versi driver di <em>Driver Settings</em>.</li>
+        <li>Klik <strong>Test Connection</strong>. Jika muncul tulisan <span class="badge">Connected</span>, klik OK lalu klik <strong>Finish</strong>.</li>
+    </</ol>
+
+    <h3>Langkah 2: Merancang Tabel "pengunjung"</h3>
+    <ol>
+        <li>Di sebelah kiri, klik panah pada <strong>localhost</strong> > klik panah database <span class="highlight">web-pertamaku</span> (yang otomatis dibuatkan oleh Laragon).</li>
+        <li>Klik kanan pada folder <strong>Tables</strong> > pilih <strong>Create New Table</strong>.</li>
+        <li>Ubah nama tabel di bagian atas dari <code>NewTable</code> menjadi <span class="highlight">pengunjung</span>.</li>
+        <li><strong>Buat Kolom 1 (id):</strong> Klik kanan di area tengah > <em>Create New Column</em>. Isi Name: <code>id</code>, Data Type: <code>INT</code>. Centang kotak <code>Not Null</code> dan <code>Auto Increment</code>.</li>
+        <li><strong>Beri Kunci Utama:</strong> Klik kanan pada baris <code>id</code> yang baru dibuat > pilih <em>New Constraint from Selection</em> > pastikan tipenya <code>PRIMARY KEY</code> > klik OK. (Akan muncul simbol kunci emas/tulisan PRI).</li>
+        <li><strong>Buat Kolom 2 (nama):</strong> Klik kanan lagi > <em>Create New Column</em>. Isi Name: <code>nama</code>, Data Type: <code>VARCHAR(50)</code>. Klik OK.</li>
+        <li>Klik tombol <strong>Save...</strong> di barisan paling bawah, lalu klik <strong>Persist</strong>.</li>
+    </ol>
+
+    <h3>Langkah 3: Mengisi Data Sukses</h3>
+    <ol>
+        <li>Klik tab <strong>Data</strong> di bagian atas layar tengah (di sebelah tab Properties).</li>
+        <li>Klik ikon <strong>Garis Tabel dengan Tanda Plus Hijau (+)</strong> di barisan tombol paling bawah untuk menambah baris baru.</li>
+        <li>Klik dua kali pada kolom <strong>nama</strong>, ketik <span class="highlight">Yudi</span>, lalu tekan Enter.</li>
+        <li>Klik tombol <strong>Save</strong> (ikon biru/disket di barisan bawah) untuk mengunci data. Kolom <code>id</code> akan otomatis berubah menjadi angka <strong>1</strong>! <span class="badge">Sukses!</span></li>
+    </ol>
+
+    <div class="footer">
+        <p>Semangat terus Pak Yudi! Sesi pertama selesai dengan hasil luar biasa. 🌟</p>
+        <p><strong>Didampingi oleh Mentor AI Anda</strong></p>
+    </div>
+
+</body>
+</html>
